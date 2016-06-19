@@ -1,5 +1,7 @@
 package ausmarton.shop
 
+import ausmarton.shop.inventory.Apple
+
 object Till {
-  def checkout = 0
+  def checkout(cart: Seq[Apple.type]) = cart.length * 60
 }
