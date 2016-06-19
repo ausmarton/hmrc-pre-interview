@@ -15,4 +15,10 @@ class TillSpec extends WordSpecLike with Matchers {
       Till.checkout(Seq(Apple)) shouldBe 60
     }
   }
+
+  "2 apples" should {
+    "cost 120p (£1.2)" in {
+      Till.checkout(Seq(Apple, Apple)) shouldBe 120
+    }
+  }
 }
