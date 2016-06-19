@@ -1,6 +1,6 @@
 package ausmarton.shop
 
-import ausmarton.shop.inventory.Apple
+import ausmarton.shop.inventory.{Apple, Orange}
 import org.scalatest.{Matchers, WordSpecLike}
 
 class TillSpec extends WordSpecLike with Matchers {
@@ -19,6 +19,12 @@ class TillSpec extends WordSpecLike with Matchers {
   "2 apples" should {
     "cost 120p (£1.2)" in {
       Till.checkout(Seq(Apple, Apple)) shouldBe 120
+    }
+  }
+
+  "1 orange" should {
+    "cost 25p" in {
+      Till.checkout(Seq(Orange)) shouldBe 25
     }
   }
 }

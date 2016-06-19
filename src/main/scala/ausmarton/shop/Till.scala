@@ -1,7 +1,7 @@
 package ausmarton.shop
 
-import ausmarton.shop.inventory.Apple
+import ausmarton.shop.inventory.Fruit
 
 object Till {
-  def checkout(cart: Seq[Apple.type]) = cart.length * 60
+  def checkout(cart: Seq[Fruit]) = cart.map(_.cost).sum
 }
