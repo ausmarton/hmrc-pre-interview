@@ -5,9 +5,9 @@ sealed trait Fruit {
 }
 
 object Apple extends Fruit {
-  override def cost: Int = 60
+  override def cost = 60
 }
 object Orange extends Fruit {
-  override def cost: Int = 25
+  override def cost = 25
 }
 
